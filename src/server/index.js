@@ -1,6 +1,19 @@
 var path = require('path')
+var aylien = require('aylien_textapi')
+
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
+
+// create environment variable for api keys
+const dotenv = require('dotenv')
+dotenv.config()
+
+console.log(`Your API key is ${process.env.API_KEY}`);
+
+var textapi = new aylien({
+	application_id: process.env.API_ID,
+	application_key: process.env.API_KEY
+})
 
 const app = express()
 
