@@ -8,8 +8,7 @@ const mockAPIResponse = require('./mockAPI.js')
 const dotenv = require('dotenv')
 dotenv.config()
 
-console.log(`Your API key is ${process.env.API_KEY}`);
-
+// api set in the .env file
 var textapi = new aylien({
 	application_id: process.env.API_ID,
 	application_key: process.env.API_KEY
@@ -32,4 +31,13 @@ app.listen(8080, function () {
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
+})
+
+// calling api using sdk
+textapi.sentiment({
+  'url': 'https://elemental.medium.com/fecal-transplant-death-mystery-solved-d99f24b8656f'
+}, function(error, response) {
+	if (error === null) {
+		console.log(response)
+	}
 })
