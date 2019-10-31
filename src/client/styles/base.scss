@@ -1,7 +1,11 @@
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
     min-height: 100vh;
+    padding: 5% 15%;
+    color: white;
+    background: linear-gradient(45deg, #0010a5, #ff5656);
 }
 
 main {
@@ -10,5 +14,18 @@ main {
 
 section {
     max-width: 800px;
-    margin: 50px auto;
+}
+
+.results {
+	margin: 5% 0;
+    padding: 5% 10%;
+    background: #ffffff1f;
+    font-size: 20px;
+    text-align: center;
+}
+
+#subjectivity,
+#polarity {
+	margin-top: 20px;
+	font-size: 16px;
 }
