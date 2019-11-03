@@ -31,17 +31,16 @@ function checkURL(str) {
         '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
         '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
     
-    return regex.test(str);
+    return regex.test(str)
 }
 
 // for testing JEST
-//function sum(a, b) {
-//  return a + b;
-//}
-
-//module.exports = sum;
+function formHandlerTest(a, b) {
+  return a * b
+}
 
 export { 
     handleSubmit,
-    checkURL
+    checkURL,
+    formHandlerTest
 }

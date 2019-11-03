@@ -1,5 +1,5 @@
-const sum = require('../src/client/js/formHandler');
+import { formHandlerTest } from '../src/client/js/formHandler'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+test('Multiply 3 and 5 to get 15', () => {
+  expect(formHandlerTest(3, 5)).toBe(15)
+})
