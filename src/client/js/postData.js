@@ -18,4 +18,12 @@ const postData = async(url = '', data = {}) => {
     }
 }
 
-export { postData }
+// for testing JEST
+function postDataTest(a, b) {
+  return a + b
+}
+
+export { 
+    postData,
+    postDataTest
+}
