@@ -6,6 +6,7 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
 
+    document.getElementById('analysis').innerHTML = 'Analyzing...'
     Client.postData('/', {url: input})
     
     fetch('http://localhost:8080/analyze')
@@ -13,8 +14,8 @@ function handleSubmit(event) {
     .then(function(res) {
         console.log(res.subjectivity)
         console.log(res.polarity)
-        document.getElementById('subjectivity').innerHTML = res.subjectivity
-        document.getElementById('polarity').innerHTML = res.polarity
+        document.getElementById('analysis').innerHTML = 'This article is ' + res.subjectivity 
+                                                      + ' and ' + res.polarity + '.'
     })
 }
 

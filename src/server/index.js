@@ -46,12 +46,12 @@ app.get('/analyze', function (req, res) {
 
 	// calling api using sdk
 	textapi.sentiment({
-	  'text': inputURL
+	  'url': inputURL
 	}, function(error, response) {
 		if (error === null) {
 			res.send(response)
 		} else {
-			console.log(error)
+			console.log('Error! ' + error)
 		}
 	})
 })
