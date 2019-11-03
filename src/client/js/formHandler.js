@@ -18,8 +18,6 @@ function handleSubmit(event) {
     fetch('http://localhost:8080/analyze')
     .then(res => res.json())
     .then(function(res) {
-        console.log(res.subjectivity)
-        console.log(res.polarity)
         document.getElementById('analysis').innerHTML = 'This article is ' + res.subjectivity 
                                                       + ' and ' + res.polarity + '.'
     })
@@ -35,6 +33,13 @@ function checkURL(str) {
     
     return regex.test(str);
 }
+
+// for testing JEST
+//function sum(a, b) {
+//  return a + b;
+//}
+
+//module.exports = sum;
 
 export { 
     handleSubmit,
