@@ -1,5 +1,6 @@
 import { handleSubmit } from './js/formHandler'
 import { postData } from './js/postData'
+import { checkURL } from './js/postData'
 
 import './styles/base.scss'
 import './styles/footer.scss'
